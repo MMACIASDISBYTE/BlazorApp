@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-var dbConnectionString = builder.Configuration.GetConnectionString("DeafultConnection");
+var dbConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddSingleton <IDbConnection>((sp) => new SqlConnection(dbConnectionString));
 
 builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
