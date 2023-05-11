@@ -1,4 +1,7 @@
+using FirstBlazorApp.Data;
 using Microsoft.AspNetCore.ResponseCompression;
+using System.Data;
+using System.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+var dbConnectionString = builder.Configuration.GetConnectionString("DeafultConnection");
+builder.Services.AddSingleton <IDbConnection>((sp) => new SqlConnection(dbConnectionString));
+
+builder.Services.AddScoped<IContactsRepository, ContactsRepository>();
 
 var app = builder.Build();
 
