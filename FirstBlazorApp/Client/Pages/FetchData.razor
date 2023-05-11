@@ -40,7 +40,7 @@ else
 @code {
     private WeatherForecast[]? forecasts;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync() //este evento hace q la web apenas carge se inicialice el metodo
     {
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
     }
