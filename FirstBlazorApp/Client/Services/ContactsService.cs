@@ -14,22 +14,25 @@ namespace FirstBlazorApp.Client.Services
 
         public async Task Delete(int id)
         {
-            throw new NotImplementedException();
-        }
+            await _httpClient.DeleteAsync($"api/contacts/{id}")      }
 
         public async Task<IEnumerable<Contact>> GetAll()
         {
-            return await _httpClient.GetFromJsonAsync<IEnumerable<Contact>>($"api/contacts");
+            return await _httpClient.GetFromJsonAsync<IEnumerable<Contact>>($"api/contacts/");
         }
 
         public async Task<Contact> GetDetails(int id)
         {
-            throw new NotImplementedException();
+            return await _httpClient.GetFromJsonAsync<Contact>($"api/contacts/{id}");
         }
 
         public async Task Save(Contact contact)
         {
-            throw new NotImplementedException();
+            if (contact.Id == 0)
+                await _httpClient.PostAsJsonAsync<Contact>($"api/contacts/", contact);
+            else
+                await _httpClient.PutAsJsonAsync<Contact>($"api/contacts/{contact.Id}", contact);
+
         }
     }
 }
