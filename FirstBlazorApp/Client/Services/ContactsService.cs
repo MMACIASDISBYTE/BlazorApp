@@ -14,7 +14,8 @@ namespace FirstBlazorApp.Client.Services
 
         public async Task Delete(int id)
         {
-            await _httpClient.DeleteAsync($"api/contacts/{id}")      }
+            await _httpClient.DeleteAsync($"api/contacts/{id}");
+        }
 
         public async Task<IEnumerable<Contact>> GetAll()
         {

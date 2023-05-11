@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Mariano Macias/source/repos/FirstBlazorApp/FirstBlazorApp/Client/Pages/ContactDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariano Macias/source/repos/FirstBlazorApp/FirstBlazorApp/Client/Pages/ContactList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Mariano Macias/source/repos/FirstBlazorApp/FirstBlazorApp/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
