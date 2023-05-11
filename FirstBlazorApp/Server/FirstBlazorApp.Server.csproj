@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.15" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\FirstBlazorApp.Data\FirstBlazorApp.Data.csproj" />
     <ProjectReference Include="..\Client\FirstBlazorApp.Client.csproj" />
     <ProjectReference Include="..\Shared\FirstBlazorApp.Shared.csproj" />
   </ItemGroup>
